@@ -30,8 +30,33 @@ possibly works created by same.</p>
         <h1>Miscellaneous projects</h1>
         <p> chgwp.py is a Python script to change the wallpapers for all
         monitors on a given virtual desktop in OS X based on a supplied "theme"
-        keyword (or randomly, if no keyword was supplied). Read more and download here:
+        keyword (or randomly, if no keyword was supplied). Read more and
+        download here:
         <a href="http://bcwolven.github.io/pychgwp">chgwp.py</a>
+        <p><strong>NOTE:</strong> This script relies on the availablility of the
+        following modules that come with the "stock" OS X Python: 
+        <pre><code>
+        from AppKit import NSWorkspace, NSScreen
+        from Foundation import NSURL
+        </pre></code>
+        </p>
+        <p>Now *my* default version of Python is *not* the standard OS version,
+        but you can specify which version of Python is called in various ways.
+        To use this script I simply make it executable and include the
+        following as the first line:
+        <pre><code>
+        #!/usr/bin/python
+        </pre></code>
+        </p>
+        <p>You can point to a different version of Python, say that installed
+        using <a href="http://brew.sh">Homebrew</a>, by changing that first
+        line to the following, e.g., if you've installed a particular package
+        using brew and don't <em>want</em> to use the standard OS version of
+        Python.
+        <pre><code>
+        #!/usr/local/bin/python
+        </pre></code>
+        </p>
       </section>
       <footer>
         <hr/>
